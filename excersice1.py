@@ -1,6 +1,8 @@
-monthlySalary = float(input("Enter your monthly salary: "))
+list1 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-monthName = input("Enter the name of the month: ")
+month = int(input("Enter the month in numbers (from 1 to 12): "))
+
+monthlySalary = float(input(f"Your salary for {list1[month - 1]} is:"))
 
 savings = (float(input("Enter the percentage you want to save: "))*monthlySalary)/100
  
@@ -10,31 +12,31 @@ electricity = (float(input("Enter the percentage you pay for electricity: "))*mo
 
 total = savings + rent + electricity
 
-def expenses():
-    print("Your Savings are: ", savings)
-    print("Your Rent is: ", rent)
-    print("Your Electricity is: ", electricity)
+def expenses(s, r, e):
+    print("Your Savings are: ", s)
+    print("Your Rent is: ", r)
+    print("Your Electricity is: ", e)
 
-def totalExpenses():
-    totalExpenses = savings + rent + electricity
+def totalExpenses(s, r, e):
+    totalExpenses = s + r + e
     print("Your total expenses are: ", totalExpenses)
 
-def Remaining():
-    remaining = monthlySalary - total
+def Remaining(ms, t):
+    remaining = ms - t
     print("Your remaining salary is: ", remaining)
 
-def yearlyRentElectricity():
-    yearlyRent = rent * 12
-    yearlyElectricity = electricity * 12
+def yearlyRentElectricity(r, e):
+    yearlyRent = r * 12
+    yearlyElectricity = e * 12
     yearlyTotal = yearlyRent + yearlyElectricity
     print("Your yearly total expenses are: ", yearlyTotal)
 
-def justForFun():
-    monthlyFun = monthlySalary ** 12
+def justForFun(ms):
+    monthlyFun = ms ** 12
     print("MonthlySalary powered by 12 ", monthlyFun)
 
-expenses()
-totalExpenses()
-Remaining()
-yearlyRentElectricity()
-justForFun()
+expenses(savings, rent, electricity)
+totalExpenses(savings, rent, electricity)
+Remaining(monthlySalary, total)
+yearlyRentElectricity(rent, electricity)
+justForFun(monthlySalary)
