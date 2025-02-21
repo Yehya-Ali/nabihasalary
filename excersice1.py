@@ -13,25 +13,30 @@ electricity = (float(input("Enter the percentage you pay for electricity: "))*mo
 total = savings + rent + electricity
 
 def expenses(s, r, e):
+
     print("Your Savings are: ", s)
     print("Your Rent is: ", r)
     print("Your Electricity is: ", e)
 
 def totalExpenses(s, r, e):
+
     totalExpenses = s + r + e
     print("Your total expenses are: ", totalExpenses)
 
 def Remaining(ms, t):
+
     remaining = ms - t
     print("Your remaining salary is: ", remaining)
 
 def yearlyRentElectricity(r, e):
+
     yearlyRent = r * 12
     yearlyElectricity = e * 12
     yearlyTotal = yearlyRent + yearlyElectricity
     print("Your yearly total expenses are: ", yearlyTotal)
 
 def justForFun(ms):
+    
     monthlyFun = ms ** 12
     print("MonthlySalary powered by 12 ", monthlyFun)
 
